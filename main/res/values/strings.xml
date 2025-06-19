@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ΣduΡαψ</string>
+    <string name="add_student">Add Student</string>
+    <string name="check_fees_status">Check Fees Status</string>
+    <string name="student_profiles">Student Profiles</string>
+    <string name="promote_student">Promote Student</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="guardian_mobile_number">Guardian Mobile Number</string>
+    <string name="month_of_joining">Month of Joining</string>
+    <string name="save_student">Save Student</string>
+    <string name="select_month">Select Month</string>
+    <string name="select_semester">Select Semester</string>
+    <string name="filter_all">All</string>
+    <string name="filter_paid">Paid</string>
+    <string name="filter_unpaid">Unpaid</string>
+    <string name="mark_as_paid">Mark as Paid</string>
+    <string name="promotion_date">Promotion Date</string>
+    <string name="select_year">Select Year</string>
+    <string name="promote">Promote</string>
+    <string name="student_name">Student Name</string>
+
+    <string name="dialog_welcome_title">Welcome!</string>
+    <string name="dialog_name_prompt">Please enter your name to personalize your experience:</string>
+    <string name="hint_your_name">Your Name</string>
+    <string name="button_save">Save</string>
+
+    <string name="tutorial_skip">Skip</string>
+    <string name="tutorial_next">Next</string>
+    <string name="tutorial_done">Done</string>
+    <string name="tutorial_welcome_title">Welcome to EduPay!</string>
+    <string name="tutorial_welcome_desc">Your comprehensive solution for managing student fees and academic progress.</string>
+    <string name="tutorial_add_students_title">Add &amp; Manage Students</string>
+    <string name="tutorial_add_students_desc">Easily add new students, view their profiles, and import/export data.</string>
+    <string name="tutorial_track_fees_title">Track Fees Status</string>
+    <string name="tutorial_track_fees_desc">Monitor monthly fee payments, mark paid/unpaid, and filter by status.</string>
+    <string name="tutorial_student_profiles_title">Student Profiles</string>
+    <string name="tutorial_student_profiles_desc">View detailed student information, including their current semester and fee status at a glance.</string>
+    <string name="tutorial_promote_students_title">Promote Students</string>
+    <string name="tutorial_promote_students_desc">Effortlessly promote students to the next semester based on academic periods.</string>
+
+    <string name="color_legend_title">Semester Color Legend</string>
+    <string name="close_button">Close</string>
+
+</resources>

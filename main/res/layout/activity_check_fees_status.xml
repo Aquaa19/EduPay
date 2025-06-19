@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
+    tools:context=".CheckFeesStatusActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_fees_status"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnBackground"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etSearchStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search student by name"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface"
+        android:backgroundTint="?attr/colorOnSurface"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- Month Selector -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:id="@+id/tvSelectedMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"/>
+            <Spinner
+                android:id="@+id/spinnerMonth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/months"
+                android:backgroundTint="?attr/colorOnBackground"
+                android:popupBackground="?attr/colorSurface"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+
+        <!-- Semester Selector -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="8dp">
+            <TextView
+                android:id="@+id/tvSelectedSemester"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"/>
+            <Spinner
+                android:id="@+id/spinnerSemester"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/semesters"
+                android:backgroundTint="?attr/colorOnBackground"
+                android:popupBackground="?attr/colorSurface"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- Existing RadioGroup for Paid/Unpaid/All -->
+        <RadioGroup
+            android:id="@+id/rgFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <RadioButton
+                android:id="@+id/rbFilterAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_all"
+                android:textColor="?attr/colorOnBackground"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/rbFilterPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_paid"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginStart="16dp"/>
+            <RadioButton
+                android:id="@+id/rbFilterUnpaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_unpaid"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginStart="16dp"/>
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cbSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select All"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
+    <!-- NEW: RadioGroup for Student Status Filter (Active/Graduated/All) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_marginEnd="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgStudentStatusFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbStatusActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textColor="?attr/colorOnBackground"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/rbStatusGraduated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graduated"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginStart="16dp"/>
+            <RadioButton
+                android:id="@+id/rbStatusAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginStart="16dp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lvFeeStatus"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="?attr/colorOnSurface"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>

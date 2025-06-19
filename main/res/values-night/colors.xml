@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_background">@color/dark_background</color>
+    <color name="light_surface">@color/dark_surface</color>
+    <color name="light_on_surface">@color/dark_on_surface</color>
+    <color name="light_on_background">@color/dark_on_background</color>
+    <color name="light_stroke">@color/dark_stroke</color>
+
+</resources>

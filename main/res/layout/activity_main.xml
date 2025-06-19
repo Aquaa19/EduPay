@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="48sp"
+        android:textStyle="italic|bold"
+        android:textColor="#03A9F4"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/notoserif_blackitalic" />
+
+    <Button
+        android:id="@+id/btnAddStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_student"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        android:backgroundTint="#673AB7" />
+
+    <Button
+        android:id="@+id/btnCheckFeesStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/check_fees_status"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        android:backgroundTint="#E91E63" />
+
+    <Button
+        android:id="@+id/btnStudentProfiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/student_profiles"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        android:backgroundTint="#009688" />
+
+    <Button
+        android:id="@+id/btnPromoteStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/promote_student"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        android:backgroundTint="#E038EB" />
+
+</LinearLayout>

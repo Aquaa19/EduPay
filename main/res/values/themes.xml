@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.EduPay" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/app_primary_color</item> <item name="colorPrimaryVariant">@color/app_primary_dark_color</item> <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/semester3_coral</item>
+        <item name="colorSecondaryVariant">@color/semester3_coral</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:colorBackground">@color/light_background</item>
+        <item name="colorSurface">@color/light_surface</item>
+        <item name="colorOnSurface">@color/light_on_surface</item>
+        <item name="colorOnBackground">@color/light_on_background</item>
+
+        <item name="cardStrokeColor">@color/light_stroke</item>
+    </style>
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
+    tools:context=".PromoteStudentActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/promote_student"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnBackground"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_semester"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerFilterSemester"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="?attr/colorOnBackground"
+            android:popupBackground="?attr/colorSurface"
+            android:entries="@array/semesters"
+            android:spinnerMode="dropdown"/>
+    </LinearLayout>
+
+    <!-- NEW: RadioGroup for Student Status Filter (Active/Graduated) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Status:"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_marginEnd="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgStudentStatusFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbStatusActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textColor="?attr/colorOnBackground"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/rbStatusGraduated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graduated"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginStart="16dp"/>
+            <!-- Removed "All" as for promotion, we usually only care about active students -->
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Promotion Date:"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerPromotionMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/months"
+            android:backgroundTint="?attr/colorOnBackground"
+            android:popupBackground="?attr/colorSurface"
+            android:spinnerMode="dropdown"/>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cbSelectAllStudents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select All"
+        android:textColor="?attr/colorOnBackground"
+        android:layout_gravity="end"
+        android:layout_marginBottom="8dp"/>
+
+    <ListView
+        android:id="@+id/lvPromoteStudents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:clipToPadding="false"/>
+
+    <Button
+        android:id="@+id/btnPromoteSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Promote Selected Students"
+        android:backgroundTint="?attr/colorPrimary"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
+    tools:context=".StudentProfilesActivity">
+
+    <!-- Title and Help Icon Container -->
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student_profiles"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/ivHelpIcon"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/ivHelpIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_help"
+            android:tint="?attr/colorPrimary"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Help"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </RelativeLayout>
+
+
+    <!-- Search EditText -->
+    <EditText
+        android:id="@+id/etSearchStudentProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_container"
+        android:hint="Search student by name"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface"
+        android:backgroundTint="?attr/colorOnSurface"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/filter_container_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etSearchStudentProfile"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_semester"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerSemester"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="?attr/colorOnBackground"
+            android:popupBackground="?attr/colorSurface"
+            android:entries="@array/semesters"
+            android:spinnerMode="dropdown"/>
+    </LinearLayout>
+
+    <!-- NEW: RadioGroup for Student Status Filter (Active/Graduated/All) -->
+    <LinearLayout
+        android:id="@+id/filter_container_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/filter_container_semester"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_marginEnd="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgStudentStatusFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbStatusActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textColor="?attr/colorOnBackground"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/rbStatusGraduated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graduated"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginStart="16dp"/>
+            <RadioButton
+                android:id="@+id/rbStatusAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginStart="16dp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lvStudentProfiles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filter_container_status"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:clipToPadding="false"/>
+
+</RelativeLayout>
